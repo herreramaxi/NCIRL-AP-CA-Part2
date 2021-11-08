@@ -26,8 +26,6 @@ public class ErrorCommand extends ResponseCommand {
 
     @Override
     public void Execute(UIMediator uiMediator) {
-        uiMediator.getTcpConnection().Close();
-
         StringBuilder sb = new StringBuilder();
         sb.append("Response: ").append(_response).append("\n");
         sb.append("Error message: ").append(_errorMessage);
