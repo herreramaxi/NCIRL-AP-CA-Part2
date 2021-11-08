@@ -21,7 +21,7 @@ public class InMemoryDatabase implements IEventRepository {
 
     private HashMap<LocalDate, SortedEventsList> _hashMap = new HashMap<>();
 
-    //Time complexity tree: O(logN)
+    //Time complexity tree: O(N)
     @Override
     public synchronized void add(Event event) {
         if (!_hashMap.containsKey(event.getDate())) {
